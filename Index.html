@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>HealthHub Hindi - स्वस्थ जीवन की ओर | हेल्थ, फिटनेस और न्यूट्रिशन</title>
+    <meta name="description" content="HealthHub Hindi पर पाएं प्रमाणित स्वास्थ्य टिप्स, वजन घटाने के उपाय, डाइट प्लान, और सटीक BMI, कैलोरी और आयु कैलकुलेटर।">
+    <meta name="keywords" content="HealthHub Hindi, फिटनेस टिप्स, वजन कैसे घटाएं, BMI कैलकुलेटर, कैलोरी कैलकुलेटर, हिंदी हेल्थ ब्लॉग">
+    <meta name="author" content="HealthHub Hindi Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HealthHub Hindi - स्वस्थ जीवन की ओर">
+    <meta property="og:description" content="प्रमाणित स्वास्थ्य टिप्स, वजन घटाने के उपाय और सटीक हेल्थ कैलकुलेटर।">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HealthHub Hindi - स्वस्थ जीवन की ओर">
+    <meta name="twitter:description" content="प्रमाणित स्वास्थ्य टिप्स और सटीक हेल्थ कैलकुलेटर।">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthTopicContent",
+      "name": "HealthHub Hindi",
+      "url": "https://healthhubhindi.com",
+      "description": "स्वस्थ जीवन की ओर - हिंदी में स्वास्थ्य और फिटनेस का संपूर्ण गाइड",
+      "inLanguage": "hi"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #16a34a;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gray: #64748b;
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --light: #0f172a;
+            --white: #1e293b;
+            --dark: #f8fafc;
+            --gray: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            transition: var(--transition);
+            line-height: 1.6;
+        }
+
+        /* Utility Components */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-secondary { background: var(--secondary); }
+        .btn-secondary:hover { box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2); }
+
+        /* Navigation Bar */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        nav ul li a:hover { color: var(--primary); }
+
+        .nav-tools {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 24px;
+            border: 2px solid rgba(0,0,0,0.05);
+            border-radius: var(--radius);
+            font-size: 16px;
+            background: var(--white);
+            color: var(--dark);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        /* AdSense Ready Blocks */
+        .adsense-block {
+            background: rgba(0,0,0,0.02);
+            border: 1px dashed var(--gray);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            color: var(--gray);
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Main System Grid Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 968px) {
+            .main-layout { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+            .hero h1 { font-size: 32px; }
+        }
+
+        /* Cards & Architecture */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        .card:hover { transform: translateY(-2px); }
+
+        /* Calculator Styles */
+        .calculator-group {
+            margin-bottom: 20px;
+        }
+
+        .calculator-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(0,0,0,0.05);
+            border-radius: var(--radius);
+            background: var(--light);
+            color: var(--dark);
+            font-size: 16px;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: var(--radius);
+            background: var(--light);
+            display: none;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* Blog Grid System */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media(max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.02);
+            cursor: pointer;
+        }
+
+        .blog-thumb {
+            height: 180px;
+            background: #cbd5e1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blog-content { padding: 20px; }
+        .blog-category {
+            color: var(--secondary);
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .blog-title {
+            font-size: 18px;
+            margin: 8px 0;
+            color: var(--dark);
+        }
+
+        /* Content Section Switcher View */
+        .view-section { display: none; }
+        .view-section.active { display: block; }
+
+        /* Affiliate Section */
+        .affiliate-product {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: var(--radius);
+            margin-top: 40px;
+        }
+        .newsletter input {
+            padding: 12px;
+            border-radius: var(--radius);
+            border: none;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 20px 0;
+            margin-top: 80px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        @media(max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+        footer h4 { color: white; margin-bottom: 20px; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { color: #94a3b8; text-decoration: none; transition: var(--transition); }
+        footer ul li a:hover { color: white; }
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo" onclick="switchView('home')">HealthHub <span>Hindi</span></a>
+            <nav>
+                <ul>
+                    <li><a onclick="switchView('home')">होम</a></li>
+                    <li><a onclick="switchView('calculators')">कैलकुलेटर</a></li>
+                    <li><a onclick="switchView('blog')">ब्लॉग</a></li>
+                    <li><a onclick="switchView('about')">हमारे बारे में</a></li>
+                    <li><a onclick="switchView('contact')">संपर्क करें</a></li>
+                </ul>
+            </nav>
+            <div class="nav-tools">
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+                <a onclick="switchView('calculators')" class="btn btn-secondary" style="padding: 8px 16px; font-size: 14px;">कैलकुलेटर</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Banner AdSense Block -->
+    <div class="container">
+        <div class="adsense-block">Google AdSense Ads Space - Responsive Header Banner</div>
+    </div>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="container">
+
+        <!-- ================= HOME VIEW ================= -->
+        <section id="view-home" class="view-section active">
+            <div class="hero">
+                <h1>स्वस्थ जीवन की ओर पहला कदम</h1>
+                <p>प्रमाणित और सटीक स्वास्थ्य जानकारी, डाइट प्लान और स्मार्ट हेल्थ कैलकुलेटर्स</p>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="mainSearch" placeholder="स्वास्थ्य लेख या बीमारी खोजें... (उदा: वजन घटाने के उपाय)" onkeyup="searchBlog()">
+                </div>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <button onclick="switchView('calculators')" class="btn">BMI कैलकुलेटर</button>
+                    <button onclick="switchView('blog')" class="btn btn-secondary">हेल्थ टिप्स पढ़ें</button>
+                </div>
+            </div>
+
+            <div class="main-layout">
+                <!-- Left Main Content Grid -->
+                <div>
+                    <h2 style="margin-bottom: 20px;">विशेष लेख (Featured Articles)</h2>
+                    <div class="blog-grid" id="featured-posts">
+                        <!-- Dynamic Featured Content Injection -->
+                    </div>
+
+                    <div class="adsense-block">In-Feed Native AdSense Block</div>
+
+                    <h2 style="margin-bottom: 20px; margin-top: 20px;">नवीनतम स्वास्थ्य गाइड</h2>
+                    <div class="blog-grid" id="latest-posts">
+                        <!-- Dynamic Content Injection -->
+                    </div>
+                </div>
+
+                <!-- Right Sidebar Layout -->
+                <aside>
+                    <!-- Quick BMI Calculator App Preview Widget -->
+                    <div class="card" style="border-top: 4px solid var(--primary);">
+                        <h3>त्वरित BMI जांचें</h3>
+                        <p style="font-size:14px; color:var(--gray); margin-bottom:15px;">अपनी सेहत का तुरंत हाल जानें।</p>
+                        <div class="calculator-group">
+                            <input type="number" id="quickWeight" class="form-control" placeholder="वजन (KG)">
+                        </div>
+                        <div class="calculator-group">
+                            <input type="number" id="quickHeight" class="form-control" placeholder="लंबाई (CM)">
+                        </div>
+                        <button onclick="calculateQuickBMI()" class="btn id-btn" style="width:100%;">गणना करें</button>
+                        <div id="quickBMIResult" class="result-box"></div>
+                    </div>
+
+                    <!-- Premium Affiliate Recommendations -->
+                    <div class="card">
+                        <h3>अनुशंसित हेल्थ प्रोडक्ट्स</h3>
+                        <div class="affiliate-product">
+                            <div style="width:50px; height:50px; background:#e2e8f0; border-radius:8px;"></div>
+                            <div>
+                                <h4 style="font-size:14px;">Premium Whey Protein Organic</h4>
+                                <a href="#" target="_blank" style="color:var(--secondary); font-size:12px; font-weight:700;">अमेज़न पर देखें →</a>
+                            </div>
+                        </div>
+                        <div class="affiliate-product">
+                            <div style="width:50px; height:50px; background:#e2e8f0; border-radius:8px;"></div>
+                            <div>
+                                <h4 style="font-size:14px;">Digital Smart Fitness Watch</h4>
+                                <a href="#" target="_blank" style="color:var(--secondary); font-size:12px; font-weight:700;">अमेज़न पर देखें →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adsense-block">Sticky Sidebar Ad Widget</div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ================= CALCULATORS VIEW ================= -->
+        <section id="view-calculators" class="view-section">
+            <div class="hero" style="padding: 40px 0;">
+                <h2>स्मार्ट हेल्थ कैलकुलेटर हब</h2>
+                <p>सटीक वैज्ञानिक डेटा पर आधारित हेल्थ मैट्रिक्स</p>
+            </div>
+
+            <div class="m
