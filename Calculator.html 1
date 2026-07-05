@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator - HealthHub Hindi</title>
+  <style>body{font-family:Arial;padding:20px;max-width:500px;margin:auto} input{width:100%;padding:10px;margin:8px 0} button{background:#0d6efd;color:#fff;padding:10px;border:none;width:100%}</style>
+</head>
+<body>
+  <a href="index.html">← होम वापस</a>
+  <h1>BMI कैलकुलेटर</h1>
+  <input type="number" id="weight" placeholder="वजन KG में">
+  <input type="number" id="height" placeholder="लंबाई CM में">
+  <button onclick="calc()">गणना करें</button>
+  <h2 id="result"></h2>
+  <script>
+    function calc(){
+      let w=document.getElementById('weight').value;
+      let h=document.getElementById('height').value/100;
+      let bmi=(w/(h*h)).toFixed(2);
+      document.getElementById('result').innerText="आपका BMI: "+bmi;
+    }
+  </script>
+</body>
+</html>
