@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>संपर्क करें - HealthHub Hindi</title>
+  <style>body{font-family:Arial;padding:20px;max-width:800px;margin:auto} input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px} button{background:#0d6efd;color:#fff;padding:10px 20px;border:none;border-radius:5px}</style>
+</head>
+<body>
+  <header>
+    <a href="index.html">होम</a>
+    <a href="about.html">हमारे बारे में</a>
+  </header>
+  <h1>संपर्क करें</h1>
+  <p>कोई सवाल है? हमें मैसेज करें:</p>
+  <form onsubmit="alert('धन्यवाद! आपका मैसेज मिल गया।');return false;">
+    <input type="text" placeholder="आपका नाम" required>
+    <input type="email" placeholder="आपका ईमेल" required>
+    <textarea rows="5" placeholder="आपका संदेश" required></textarea>
+    <button type="submit">भेजें</button>
+  </form>
+</body>
+</html>
